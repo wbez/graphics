@@ -82,7 +82,7 @@ var drawGraph = function(graphicWidth) {
     var aspectHeight;
     var aspectWidth;
     var color = d3.scale.ordinal()
-        .range([ colors['red3'], colors['yellow3'], colors['blue3'], colors['orange3'], colors['teal3'] ]);
+        .range([ colors['teal3'] ]);
     var graph = d3.select('#graphic');
     var margin = {
     	top: 5,
@@ -101,7 +101,7 @@ var drawGraph = function(graphicWidth) {
         ticksY = 5;
     } else {
         aspectWidth = 16;
-        aspectHeight = 9;
+        aspectHeight = 6;
         ticksX = 10;
         ticksY = 10;
     }

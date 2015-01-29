@@ -115,21 +115,21 @@
 </head>
 
 <body>
-    {% if COPY.labels.headline %}<h1>{{ COPY.labels.headline }}</h1>{% endif %}
-    {% if COPY.labels.subhed %}<h2>{{ COPY.labels.subhed }}</h2>{% endif %}
+    {% if COPY.homicide_rate.headline %}<h1>{{ COPY.homicide_rate.headline }}</h1>{% endif %}
+    {% if COPY.homicide_rate.subhed %}<h2>{{ COPY.homicide_rate.subhed }}</h2>{% endif %}
 
     <div id="graphic"><img src="fallback.png" alt="[Chart]" class="fallback" /></div>
     
-    {% if COPY.labels.footnote %}
+    {% if COPY.homicide_rate.footnote %}
     <div class="footnotes">
         <h4>Notes</h4>
-        <p>{{ COPY.labels.footnote }}</p>
+        <p>{{ COPY.homicide_rate.footnote }}</p>
     </div>
     {% endif %}
 
     <div class="footer">
-        {% if COPY.labels.source %}<p>Source: {{ COPY.labels.source }}</p>{% endif %}
-        {% if COPY.labels.credit %}<p>Credit: {{ COPY.labels.credit }}</p>{% endif %}
+        {% if COPY.homicide_rate.source %}<p>Source: {{ COPY.homicide_rate.source }}</p>{% endif %}
+        {% if COPY.homicide_rate.credit %}<p>Credit: {{ COPY.homicide_rate.credit }}</p>{% endif %}
     </div>
 
     <script src="js/lib/jquery.min.js" type="text/javascript"></script>
