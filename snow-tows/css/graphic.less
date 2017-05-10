@@ -1,0 +1,65 @@
+@import "base";
+
+.bar text {
+    fill: #fff;
+
+    &.hidden {
+        display: none;
+    }
+}
+
+.controls {
+	position: relative;
+
+	.arrowRight, .arrowLeft {
+		cursor: pointer;
+		position: absolute;
+		top:0.5em;
+		font-size: 5em;
+		-webkit-text-shadow: 1px 1px 1px #999;
+		-moz-text-shadow:    1px 1px 1px #999;
+		text-shadow:         1px 1px 1px #999;
+
+		&:hover {
+			color:#e1e1e1;
+		}
+	}
+
+	.arrowRight {
+		right:15px;
+	}
+
+	.arrowLeft{
+		left:15px;
+	}
+}
+
+.text {
+	display: table;
+	font-size: 1.25em;
+	width: 80%;
+	margin: auto;
+	line-height: 1.5em;
+	height:8em;
+	text-align: center;
+
+	p {
+		display: table-cell;
+		vertical-align: middle;
+	}
+}
+
+@media (max-width: 500px) {
+	.text {
+		font-size: 1em;
+		height: 12em;
+		width: 75%;
+	}
+	.controls {
+		.arrowRight, .arrowLeft {
+			font-size: 3em;
+			top: 1.5em;
+		}
+	}
+
+}

@@ -1,0 +1,77 @@
+@import "base";
+
+@head-height: 40px;
+
+// Add custom styles here
+
+h1,h2,h3 {
+	font-family: "Source Sans Pro",sans-serif;
+	color: #333;
+	margin: 0;
+}
+
+h1 {
+	font-size: 1em;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: 1.25em;
+	font-weight: 700;
+}
+
+.box {
+	position:absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width:100%;
+	background-color: rgba(255,255,255,0.95);
+	display: none;
+	color: #333;
+
+	.boxHead {
+		background-color: #333;
+		color: #fff;
+		height:@head-height;
+		line-height: @head-height;
+		font-size: @head-height*0.35px;
+		padding: 2px 20px 2px 5px;
+
+	}
+
+	.boxText {
+		padding: 2px 5px;
+		line-height: 2em;
+	}
+
+	.boxClose {
+		position: absolute;
+		top: 0px;
+		right: 5px;
+		cursor: pointer;
+		line-height: @head-height;
+		font-size: 2em;
+		color: #fff;
+
+		&:hover {
+			color:#999;
+		}
+	}
+}
+
+#g-ai2html-graphic-small { display: none; }
+
+// ai2html artboard sizes
+@media screen and (min-width: 585px) {
+    #g-ai2html-graphic-small { display: none; }
+}
+
+@media screen and (max-width: 584px) {
+    #g-ai2html-graphic-medium { display: none; }
+    #g-ai2html-graphic-small { display: block; }
+    .box .boxHead {
+		line-height:@head-height*.5px;
+	}
+}

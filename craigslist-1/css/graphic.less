@@ -1,0 +1,147 @@
+@import "base";
+
+svg {
+    font-size: 20px;
+    background-color: #fff;
+}
+
+.states path {
+    fill: #fff;
+    stroke: #ebebeb;
+    stroke-width: 2.5px;
+
+    &.primary {
+        fill: #fff;
+        stroke: #bababa;
+    }
+}
+
+path.landmass { fill: #a8d5ef; }
+
+.lakes path {
+    fill: #d3eaf7;
+    stroke: #a8d5ef;
+    stroke-width: 1px;
+}
+
+.rivers path {
+    fill: none;
+    stroke: #a8d5ef;
+    stroke-width: 1px;
+}
+
+.cities path {
+    fill: #999;
+
+    &.admin-0-capital { fill: #333; }
+}
+
+.community_areas {
+    // fill: #31a354;
+    // stroke: #fff;
+    fill: #fff;
+    fill-opacity: 0;
+    stroke: #fff;
+    stroke-width: 2px;
+}
+
+.points {
+    opacity:0.5;
+
+    .neutral {
+        opacity: 0;
+    }
+}
+
+.positive {
+    fill: #4dac26;
+}
+
+.negative {
+    fill: #d01c8b; 
+}
+
+.city-labels text {
+    fill: #787878;
+    font-size: 65%;
+    text-anchor: start;
+    font-family: Helvetica, Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+
+    &.admin-0-capital {
+        fill: #555;
+        font-weight: bold;
+    }
+}
+
+.city-labels.shadow text {
+    fill: #fff;
+    stroke: #fff;
+    stroke-width: 2px;
+    opacity: .7;
+}
+
+.country-labels text {
+    fill: #787878;
+    font-size: 80%;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    text-anchor: middle;
+    font-family: Helvetica, Arial,sans-serif;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+
+    &.primary {
+        fill: #555;
+        font-weight: 700;
+        font-size: 90%;
+    }
+    &.bhutan { display: none; }
+}
+
+.scale-bar, .legend {
+    line {
+        stroke: #666;
+        stroke-width: 5px;
+    }
+    text {
+        font-family: Helvetica, Arial,sans-serif;
+        fill: #666;
+        font-size: 60%;
+        -webkit-font-smoothing: antialiased;
+    }
+}
+
+.legend text {
+    font-size: 90%;
+}
+
+.chicago-boundary {
+    fill: #e9e9e9;
+    stroke: #ebebeb;
+    stroke-width: 2.5px;
+}
+
+// responsive styles
+@media screen and (max-width: 500px) {
+    svg { font-size: 12px; }
+    .countries path { stroke-width: 2px; }
+    .country-labels text {
+        &.bangladesh,
+        &.bhutan {
+            display: none;
+        }
+    }
+    .city-labels text { letter-spacing: .5px; }
+    .city-labels.shadow { display: none; }
+    .city-labels text,
+    .cities path {
+        &.scalerank-4,
+        &.scalerank-5,
+        &.scalerank-6,
+        &.scalerank-7,
+        &.scalerank-8 {
+            display: none;
+        }
+    }
+}

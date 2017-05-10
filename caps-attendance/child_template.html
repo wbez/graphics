@@ -1,0 +1,23 @@
+{% extends 'base_template.html' %}
+
+{% block content %}
+
+    {% if COPY.labels.headline %}<h1>{{ COPY.labels.headline }}</h1>{% endif %}
+    {% if COPY.labels.explain %}<h2>{{ render(COPY.labels.explain) }}</h2>{% endif %}
+
+    <h3>{{ COPY.labels.subhed2 }}</h3>
+    <div id="attendees"><img src="fallback.png" alt="[Chart]" class="fallback" /></div>
+    <h3>{{ COPY.labels.subhed1 }}</h3>
+    <div id="meetings"><img src="fallback.png" alt="[Chart]" class="fallback" /></div>
+
+    <div class="footer">
+        {% if COPY.labels.source %}<p>Source: {{ COPY.labels.source }}</p>{% endif %}
+        {% if COPY.labels.credit %}<p>Credit: {{ COPY.labels.credit }}</p>{% endif %}
+    </div>
+    {% if COPY.labels.footnote %}
+    <div class="footnotes">
+        <p>{{ COPY.labels.footnote }}</p>
+    </div>
+    {% endif %}
+
+{% endblock content %}

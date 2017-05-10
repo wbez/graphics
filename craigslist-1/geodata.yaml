@@ -1,0 +1,35 @@
+bbox: '-88.094075 41.546768 -87.397701 42.091447'
+layers: 
+
+    states:
+        type: 'shp'
+        path: 'http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_admin_1_states_provinces.zip'
+        id-property: 'name'
+        properties:
+            - 'state=name'
+
+    chicago:
+        type: 'shp'
+        path: '/Users/chris/data/geo/City_Boundary/City_Boundary4269.shp/City_Boundary.shp'
+
+    community_areas:
+        type: 'shp'
+        path: '/Users/chris/data/geo/Comm_Areas/commareas4326.shp'
+        id-property: 'COMMUNITY'
+        properties:
+            - 'community=COMMUNITY'
+
+    lakes:
+        type: 'shp'
+        path: '/Users/chris/data/geo/Waterways/water4269.shp'
+        id-property: 'NAME'
+        properties:
+            - 'name=NAME'
+        where: NAME = 'LAKE MICHIGAN'
+
+    listings:
+        type: 'json'
+        path: '/Users/chris/data/craigslist/points.geojson'
+        properties:
+            - 'positive'
+            - 'negative'

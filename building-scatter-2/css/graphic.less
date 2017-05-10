@@ -1,0 +1,58 @@
+@import "base";
+
+.lines {
+    fill: none;
+    stroke-width: 3px;
+    stroke: #B1B1B1;
+}
+
+.value text, .annotation text  {
+    font-size: 12px;
+    font-weight: bold;
+    fill: #999;
+}
+
+text.axis-name {
+    -webkit-font-smoothing: antialiased;
+    fill: #999;
+}
+
+circle {
+    opacity: 0.9;
+}
+
+.centerline {
+    stroke-width: 1;
+    stroke: #C5C5C5;
+    stroke-dasharray: 5,5;
+}
+
+.arrowline {
+    stroke-width: 1;
+    stroke: #C5C5C5;
+}
+
+.arrow {
+    fill: #C5C5C5;
+}
+
+@media screen and (max-width: 500px) {
+    .value text {
+        font-size: 10px;
+    }
+
+    .arrowline, .arrow, .annotation {
+        display: none;
+    }
+
+    .axis-name {
+        display: block;
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .key {
+        display: none;
+    }
+}

@@ -1,0 +1,14 @@
+STEPS TO CREATE CHART
+
+* Create all container elements and attach to DOM
+* Set widths and heights
+* Create default states/functions for all lines, axes and scales
+	- This includes ranges but not domains
+* Create color scale
+	- This may need to be done manually with variable names
+
+UPDATE FUNCTION
+* Takes state as variable, uses that to get correct config values
+* Remakes lines and axes based on config
+* Updates state
+

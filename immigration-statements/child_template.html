@@ -1,0 +1,81 @@
+{% extends 'base_template.html' %}
+
+{% block content %}
+
+    {% if COPY.labels.headline %}<h1>{{ COPY.labels.headline }}</h1>{% endif %}
+    {% if COPY.labels.subhed %}<h2>{{ render(COPY.labels.subhed) }}</h2>{% endif %}
+
+    <div id="graphic">
+        <table>
+            <thead>
+                <tr>
+                    <!-- Row  -->
+                    <th></th>
+                    <th>{{ COPY.labels.hdr_name }}</th>
+                    <th>{{ COPY.labels.hdr_comment }}</th>
+                </tr>
+            </thead>
+
+            {% for row in COPY.data %}
+
+                {% if loop.index == 1 %}
+                <tr class="governor">
+                    <td class="spacer" colspan="5">Governor</td>
+                </tr>
+                <tr class="rep-{{ row.name_first|classify }}-{{ row.name_last|classify }}">
+                    <td data-title="{{ COPY.labels.hdr_name }}" class="image"> <img src="images/{{row.image}}" /> </td>
+                    <td data-title="{{ COPY.labels.hdr_name }}" class="name">{{ row.name_first }} {{ row.name_last }} <span class="{{ row.party }}">{{ row.party }}</span></td>
+                    <td data-title="{{ COPY.labels.hdr_comment }}" class="comment">{{ row.comment}}</td>
+                </tr>
+                {% elif loop.index == 2 %}
+                <tr class="senate">
+                    <td class="spacer" colspan="5">Senate</td>
+                </tr>
+                <tr class="rep-{{ row.name_first|classify }}-{{ row.name_last|classify }}">
+                    <td data-title="{{ COPY.labels.hdr_name }}" class="image"> <img src="images/{{row.image}}" /> </td>
+                    <td data-title="{{ COPY.labels.hdr_name }}" class="name">{{ row.name_first }} {{ row.name_last }} <span class="{{ row.party }}">{{ row.party }}</span></td>
+                    <td data-title="{{ COPY.labels.hdr_comment }}" class="comment">{{ row.comment}}</td>
+                </tr>
+                {% elif loop.index == 4 %}
+                <tr class="house">
+                    <td class="spacer" colspan="5">House</td>
+                </tr>
+                <tr class="rep-{{ row.name_first|classify }}-{{ row.name_last|classify }}">
+                    <td data-title="{{ COPY.labels.hdr_name }}" class="image"> <img src="images/{{row.image}}" /> </td>
+                    <td data-title="{{ COPY.labels.hdr_name }}" class="name">{{ row.name_first }} {{ row.name_last }} <span class="{{ row.party }}">{{ row.party }}</span><span class="district">{{ row.district }}</span></td>
+                    <td data-title="{{ COPY.labels.hdr_comment }}" class="comment">{{ row.comment}}</td>
+                </tr>
+                {% else %}
+                <tr class="rep-{{ row.name_first|classify }}-{{ row.name_last|classify }}">
+                    <td data-title="{{ COPY.labels.hdr_name }}" class="image"> <img src="images/{{row.image}}" /> </td>
+                    <td data-title="{{ COPY.labels.hdr_name }}" class="name">{{ row.name_first }} {{ row.name_last }} <span class="{{ row.party }}">{{ row.party }}</span><span class="district">{{ row.district }}</span> </td>
+                    <td data-title="{{ COPY.labels.hdr_comment }}" class="comment">{{row.comment}}</td>
+                </tr>
+                {% endif %}
+
+            {% endfor %}
+
+        </table>
+    </div>
+
+    {% if COPY.labels.footnote %}
+    <div class="footnotes">
+        <h4>Notes</h4>
+        <p>{{ COPY.labels.footnote }}</p>
+    </div>
+    {% endif %}
+
+    <div class="footer">
+        {% if COPY.labels.source %}<p>Source: {{ COPY.labels.source }}</p>{% endif %}
+        {% if COPY.labels.credit %}<p>Credit: {{ COPY.labels.credit }}</p>{% endif %}
+    </div>
+
+{% endblock content %}
+
+{% block js %}
+
+    {{ JS.push('js/lib/pym.js') }}
+    {{ JS.push('js/graphic.js') }}
+    {{ JS.render('js/graphic-footer.js') }}
+
+{% endblock js %}

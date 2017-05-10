@@ -1,0 +1,29 @@
+@import "base";
+
+.bars rect { 
+
+	&.bar-Obligations {
+		fill: #D8472B;
+	}
+
+	&.bar-Income {
+		fill: #51AADE;
+	}	 
+
+}
+
+.value text {
+	font-size: 16px;
+}
+
+.zero-line  {
+    stroke: #666;
+    stroke-width: 1px;
+    shape-rendering: crispEdges;
+}
+
+@media (max-width: 600px) {
+	.value text {
+		font-size: 12px;
+	}
+}

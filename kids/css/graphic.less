@@ -1,0 +1,126 @@
+@import "base";
+
+.axis {
+    fill: #666;
+    font-weight: bold;
+    font-size: 14px;
+
+    path { display: none; }
+}
+
+.dropdown {
+    margin-bottom: 20px;
+}
+// .positive {
+//     &.line {
+//         stroke: #72A2A9;
+//     }
+// }
+
+// .negative {
+//     &.line {
+//         stroke: #EC0101;
+//     }
+// }
+
+.buffer line {
+    stroke-width: 8px;
+    opacity: 0;
+    stroke: #ddd;
+    cursor:pointer;
+}
+
+.lines line {
+    stroke-width: 2px;
+    stroke: #ddd;
+    shape-rendering: auto;
+
+    opacity:0.5;
+
+    &.lake-view {
+        opacity:1;
+        stroke:#72A2A9;
+    }
+
+    &.austin {
+        opacity:1;
+        stroke:#EC0101;
+    }
+
+    // &.mount-greenwood {
+    //     opacity:1;
+    //     stroke:#EC0101;
+    // }
+
+    &.highlighted {
+        opacity:1;
+        stroke: #72A2A9;
+    }
+
+    &.selected {
+        opacity:1;
+        stroke: #E3A816;
+    }
+}
+
+.dots circle {
+    fill: #ddd;
+    stroke: #fff;
+    stroke-width: 1px;
+
+    opacity:0.5;
+
+    &.lake-view {
+        fill:#72A2A9;
+        opacity:1;
+    }
+
+    &.austin {
+        fill:#EC0101;
+        opacity:1;
+    }
+
+    // &.mount-greenwood {
+    //     fill:#EC0101;
+    //     opacity:1;
+    // }
+
+    &.highlighted {
+        opacity:1;
+        fill: #72A2A9;
+    }
+
+    &.selected {
+        fill: #E3A816;
+        opacity:1;
+    }
+}
+
+.value text {
+    font-size: 11px;
+    fill: #333;
+    opacity:0;
+
+    &.highlighted, &.selected, &.lake-view, &.austin{
+        opacity:1;
+    }
+}
+
+.label text {
+    font-size: 11px;
+    fill: #333;
+    opacity:0.1;
+    cursor:pointer;
+
+    &.highlighted, &.selected, &.lake-view, &.austin {
+        opacity:1;
+    }
+
+    &.selected {
+        fill:#E3A816;
+    }
+}
+
+.annotation-box {
+    fill:#64686E;
+}

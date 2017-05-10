@@ -1,0 +1,68 @@
+@import "base";
+
+.land {
+  fill: #C5C5C5;
+}
+
+.border {
+  fill: none;
+  stroke: #fff;
+  stroke-width: .5px;
+}
+
+.bubble {
+  fill: brown;
+  fill-opacity: .5;
+  stroke: #fff;
+  stroke-width: 0px;
+
+  .positive {
+    fill: #72A2A9;
+  }
+
+  .negative {
+    fill: #EC0101;
+  }
+}
+.label {
+  width:100%;
+  font-size: 16px;
+}
+
+.label2010 {
+  float:left;
+  margin-left:25%;
+}
+
+.label2016 {
+  float:right;
+  margin-right:25%;
+}
+.graphic-wrapper {
+    position: relative;
+}
+
+.bars rect { fill: #17807E; }
+
+.labels {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    border: none;
+
+    li {
+        position: absolute;
+        text-align: right;
+        font-size: 12px;
+        line-height: 1.3;
+        color: #666;
+        display: table;
+        -webkit-font-smoothing: antialiased;
+
+        span {
+            display: table-cell;
+            vertical-align: middle;
+        }
+    }
+}

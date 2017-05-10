@@ -1,0 +1,61 @@
+@import "base";
+
+.lines {
+    fill: none;
+    stroke-width: 3px;
+    stroke: #ccc;
+}
+
+.value text {
+    font-size: 12px;
+    font-weight: bold;
+    fill: #999;
+}
+
+.axis.y {
+    path { display: block; }
+    .tick line { display: block; }
+
+    &.right {
+        fill:#E3A816;
+    }
+
+    &.left {
+        fill:#252525;
+    }
+}
+
+circle {
+    fill:#252525;
+    .investigative-stop-reports & {
+        fill:#F9B816;
+    }
+    .estimate & {
+        fill:#888B90;
+
+        &.dot28 {
+            display: none;
+        }
+    }
+}
+
+/* key */
+.key {
+    .key-item {
+        label {
+            margin-left: 5px;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .value text {
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .key {
+
+    }
+}

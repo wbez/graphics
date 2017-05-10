@@ -1,0 +1,57 @@
+{% extends 'base_template.html' %}
+
+{% block content %}
+
+    {% if COPY.labels.headline %}<h1>{{ COPY.labels.headline }}</h1>{% endif %}
+    {% if COPY.labels.subhed %}<h2>{{ render(COPY.labels.subhed) }}</h2>{% endif %}
+
+    <div id="graphic">
+        <table>
+            <thead>
+                <tr>
+                    <th>{{ COPY.labels.hdr_park }}</th>
+                    <th>{{ COPY.labels.hdr_area}}</th>
+                    <th>{{ COPY.labels.hdr_elevated }}</th>
+                    <th>{{ COPY.labels.hdr_reported_level }}</th>
+                </tr>
+            </thead>
+
+            {% for row in COPY.data %}
+            <tr class="{% if row.new %}shadedrow{% endif %}">
+                <td data-title="{{ COPY.labels.hdr_park }}">{{ row.park }}</td>
+                <td data-title="{{ COPY.labels.hdr_area}}">{{ row.area }}</td>
+                <td data-title="{{ COPY.labels.hdr_elevated }}"><span class="{{ row.elevated }}">{{ row.elevated }}</span></td>
+                <td data-title="{{ COPY.labels.hdr_reported_level }}" class="amt">
+                    {% if row.highest_level %}
+                        {{ row.reported_level|float }}
+                    {% else %}
+                        {{ row.reported_level }}
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+
+        </table>
+    </div>
+
+    {% if COPY.labels.footnote %}
+    <div class="footnotes">
+        <h4>Notes</h4>
+        <p>{{ COPY.labels.footnote }}</p>
+    </div>
+    {% endif %}
+
+    <div class="footer">
+        {% if COPY.labels.source %}<p>Source: {{ COPY.labels.source }}</p>{% endif %}
+        {% if COPY.labels.credit %}<p>Credit: {{ COPY.labels.credit }}</p>{% endif %}
+    </div>
+
+{% endblock content %}
+
+{% block js %}
+
+    {{ JS.push('js/lib/pym.js') }}
+    {{ JS.push('js/graphic.js') }}
+    {{ JS.render('js/graphic-footer.js') }}
+
+{% endblock js %}
