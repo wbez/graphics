@@ -1,0 +1,63 @@
+@import "base";
+
+.lines {
+    fill: none;
+    stroke-width: 3px;
+    stroke: #ccc;
+    stroke-linecap:round;
+}
+
+.value text {
+    font-size: 12px;
+    font-weight: bold;
+    fill: #999;
+
+}
+
+line.axis-0 {
+    stroke: #4d4d4d;
+    stroke-width:2px;
+}
+
+line.axis-1 {
+    stroke: #4d4d4d;
+    stroke-dasharray: 5;
+    stroke-width:2px;
+}
+
+.label-top {
+    font-style: italic;
+    fill: #4d4d4d;
+    font-size: 11px;
+    -webkit-font-smoothing: antialiased;
+}
+
+.label-top div{
+    width:100%;
+}
+
+@media screen and (max-width: 500px) {
+    .value text {
+        font-size: 10px;
+    }
+
+
+    .label-top div{
+        width:55%;
+        font-size:11px;
+    }
+
+    line.axis-0 {
+        display:block;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .key {
+        display: block;
+    }
+
+    .value {
+        display:none;
+    }
+}
