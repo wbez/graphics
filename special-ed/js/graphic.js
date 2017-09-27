@@ -31,7 +31,7 @@ var onWindowLoaded = function() {
  */
 var formatData = function() {
     DATA.forEach(function(d) {
-        d['date'] = d3.time.format('%m/%d/%y').parse(d['date']);
+        d['date'] = d3.time.format('%Y').parse(d['date']);
 
         for (var key in d) {
             if (key != 'date' && d[key] != null && d[key].length > 0) {
