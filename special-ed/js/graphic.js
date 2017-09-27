@@ -128,8 +128,14 @@ var renderLineChart = function(config) {
     }
 
     // Calculate actual chart dimensions
-    var chartWidth = ((config['width'] - margins['left'] - margins['right'])/2) ;
-    var chartHeight = ((Math.ceil((config['width'] * aspectHeight) / aspectWidth) - margins['top'] - margins['bottom'])/2);
+    var chartWidth = (config['width'] - margins['left'] - margins['right'])/2 ;
+    var chartHeight = (Math.ceil((config['width'] * aspectHeight) / aspectWidth) - margins['top'] - margins['bottom'])/2;
+
+    if (isMobile) {
+        chartWidth = config['width'] - margins['left'] - margins['right'];
+        chartHeight = Math.ceil((config['width'] * aspectHeight) / aspectWidth) - margins['top'] - margins['bottom'];
+    }
+
     // Clear existing graphic (for redraw)
     var containerElement = d3.select(config['container']);
     containerElement.html('');
@@ -357,9 +363,13 @@ var renderLineChartTwo = function(config) {
     }
 
     // Calculate actual chart dimensions
-    var chartWidth = ((config['width'] - margins['left'] - margins['right'])/2) ;
-    var chartHeight = ((Math.ceil((config['width'] * aspectHeight) / aspectWidth) - margins['top'] - margins['bottom'])/2);
+    var chartWidth = (config['width'] - margins['left'] - margins['right'])/2 ;
+    var chartHeight = (Math.ceil((config['width'] * aspectHeight) / aspectWidth) - margins['top'] - margins['bottom'])/2;
 
+    if (isMobile) {
+        chartWidth = config['width'] - margins['left'] - margins['right'];
+        chartHeight = Math.ceil((config['width'] * aspectHeight) / aspectWidth) - margins['top'] - margins['bottom'];
+    }
     //Clear existing graphic (for redraw)
     var containerElement = d3.select(config['container']);
     containerElement.html('');
