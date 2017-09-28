@@ -6,14 +6,14 @@
     {% if COPY.labels.subhed %}<h2>{{ COPY.labels.subhed|smarty }}</h2>{% endif %}
 
     <div class="line-chart-container">
-    {% if COPY.labels.headline %}<h3>{{ COPY.labels.headline|smarty }}</h3>{% endif %}
+    {% if COPY.labels.header_one %}<h3>{{ COPY.labels.header_one|smarty }}</h3>{% endif %}
      <div id="line-chart" class="graphic">
         <img src="fallback.png" alt="[Chart]" class="fallback" />
     </div>
     </div>
 
     <div class="line-chart-container">
-    {% if COPY.labels.headline %}<h3>{{ COPY.labels.headline|smarty }}</h3>{% endif %}
+    {% if COPY.labels.header_two %}<h3>{{ COPY.labels.header_two|smarty }}</h3>{% endif %}
      <div id="line-chart-2" class="graphic">
         <img src="fallback.png" alt="[Chart]" class="fallback" />
     </div>

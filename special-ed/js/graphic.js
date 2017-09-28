@@ -53,7 +53,9 @@ var formatData = function() {
             'values': DATA.map(function(d) {
                 return {
                     'date': d['date'],
-                    'amt': d[column]
+                    'funding': d['Funding'],
+                    'students': d['Special education students'],
+                    'perstudent': d['funding per student']
                 };
     // filter out empty data. uncomment this if you have inconsistent data.
     //        }).filter(function(d) {
@@ -104,7 +106,7 @@ var renderLineChart = function(config) {
      * Setup
      */
     var dateColumn = 'date';
-    var valueColumn = 'amt';
+    var valueColumn = 'students';
 
     var aspectWidth = isMobile ? 4 : 16;
     var aspectHeight = isMobile ? 3 : 9;
@@ -113,7 +115,7 @@ var renderLineChart = function(config) {
         top: 5,
         right: 75,
         bottom: 20,
-        left: 30
+        left: 50
     };
 
     var ticksX = 10;
@@ -175,7 +177,7 @@ var renderLineChart = function(config) {
 
     /*
      * Render the HTML legend.
-     */
+     
     var legend = containerElement.append('ul')
         .attr('class', 'key')
         .selectAll('g')
@@ -193,7 +195,7 @@ var renderLineChart = function(config) {
     legend.append('label')
         .text(function(d) {
             return d['name'];
-        });
+        });*/
 
     /*
      * Create the root SVG element.
@@ -339,7 +341,7 @@ var renderLineChartTwo = function(config) {
      * Setup
      */
     var dateColumn = 'date';
-    var valueColumn = 'amt';
+    var valueColumn = 'funding';
 
     var aspectWidth = isMobile ? 4 : 16;
     var aspectHeight = isMobile ? 3 : 9;
@@ -348,7 +350,7 @@ var renderLineChartTwo = function(config) {
         top: 5,
         right: 75,
         bottom: 20,
-        left: 30
+        left: 50
     };
 
     var ticksX = 10;
@@ -409,7 +411,7 @@ var renderLineChartTwo = function(config) {
 
     /*
      * Render the HTML legend.
-     */
+     
     var legend = containerElement.append('ul')
         .attr('class', 'key')
         .selectAll('g')
@@ -428,7 +430,7 @@ var renderLineChartTwo = function(config) {
         .text(function(d) {
             return d['name'];
         });
-
+*/
     /*
      * Create the root SVG element.
      */
