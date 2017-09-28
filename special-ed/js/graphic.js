@@ -115,12 +115,12 @@ var renderLineChart = function(config) {
         top: 5,
         right: 75,
         bottom: 20,
-        left: 50
+        left: 40
     };
 
-    var ticksX = 10;
-    var ticksY = 10;
-    var roundTicksFactor = 5;
+    var ticksX = 3;
+    var ticksY = 6;
+    var roundTicksFactor = 10;
 
     // Mobile
     if (isMobile) {
@@ -168,7 +168,7 @@ var renderLineChart = function(config) {
     });
 
     var yScale = d3.scale.linear()
-        .domain([min, max])
+        .domain([34000, max])
         .range([chartHeight, 0]);
 
     var colorScale = d3.scale.ordinal()
@@ -350,11 +350,11 @@ var renderLineChartTwo = function(config) {
         top: 5,
         right: 75,
         bottom: 20,
-        left: 50
+        left: 40
     };
 
-    var ticksX = 10;
-    var ticksY = 10;
+    var ticksX = 3;
+    var ticksY = 6;
     var roundTicksFactor = 5;
 
     // Mobile
@@ -402,7 +402,7 @@ var renderLineChartTwo = function(config) {
     });
 
     var yScale = d3.scale.linear()
-        .domain([min, max])
+        .domain([400000000, max])
         .range([chartHeight, 0]);
 
     var colorScale = d3.scale.ordinal()
@@ -461,7 +461,8 @@ var renderLineChartTwo = function(config) {
     var yAxis = d3.svg.axis()
         .scale(yScale)
         .orient('left')
-        .ticks(ticksY);
+        .ticks(ticksY)
+        .tickFormat(function (d,i) {return '$' + fmtMoney(d)});
 
     /*
      * Render axes to chart.

@@ -11,6 +11,7 @@ var fmtComma = d3.format(',');
 var fmtYearAbbrev = d3.time.format('%y');
 var fmtYearFull = d3.time.format('%Y');
 var fmtMonthNum = d3.time.format('%m');
+var fmtMoney = d3.format('.2s');
 
 var formatFullDate = function(d) {
     // Output example: Dec. 23, 2014
