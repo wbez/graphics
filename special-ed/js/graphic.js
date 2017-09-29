@@ -119,7 +119,7 @@ var renderLineChart = function(config) {
     };
 
     var ticksX = 3;
-    var ticksY = 6;
+    var ticksY = 5;
     var roundTicksFactor = 10;
 
     // Mobile
@@ -168,7 +168,7 @@ var renderLineChart = function(config) {
     });
 
     var yScale = d3.scale.linear()
-        .domain([34000, max])
+        .domain([36000, max])
         .range([chartHeight, 0]);
 
     var colorScale = d3.scale.ordinal()
