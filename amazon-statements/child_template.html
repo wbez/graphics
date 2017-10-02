@@ -9,7 +9,7 @@
         <table>
             <thead>
                 {% for row in COPY.questions %}  
-                <a href="#{{ row.value|classify }}" ><button class="question-button" type="button"> {{ row.value }} </button></a> 
+                <a href="#{{ row.value|classify }}"><button class="question-button" type="button"> {{ row.value }} </button></a> 
                 {% endfor %}
             </thead>
 
