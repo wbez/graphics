@@ -35,8 +35,15 @@ table td.amt {
     text-align: right;
 }
 
+table td.image {
+    width: 75px;
+}
+
 table td.name {
     min-width: 40px;
+    max-width:100px;
+    font-size: 14px;
+    font-weight: 700;  
 }
 
 table tr.shadedrow {
@@ -73,19 +80,14 @@ span {
     &.D {
      background-color: #336699;
     }
-
-    &.district {
-        display: block;
-        color: #666;
-        padding:2px 0px;
-    }
 }
 
-table td.name {
-    min-width: 120px;
-    font-weight: 700;
-    font-size: 14px;    
+.title {
+    font-size:12px;
+    margin:0;
 }
+
+
 
 /* responsive table */
 @media screen and (max-width: 600px) {
