@@ -8,9 +8,21 @@
     <div id="graphic">
         <table>
             <thead>
+            <!-- buttoned questions
                 {% for row in COPY.questions %}  
                 <a href="#{{ row.value|classify }}"><button class="question-button" type="button"> {{ row.value }} </button></a> 
                 {% endfor %}
+            -->
+
+            <div class="dropdown">
+                <button onclick="linkDown()" class="questionbtn">Jump to a question...</button>
+                      <div id="questions-dropdown" class="dropdown-content">
+                        {% for row in COPY.questions %}  
+                        <a href="#{{ row.value|classify }}">{{ row.value }}</a> 
+                        {% endfor %}
+                      </div>
+            </div>
+
             </thead>
 
             
