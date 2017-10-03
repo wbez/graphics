@@ -35,8 +35,15 @@ table td.amt {
     text-align: right;
 }
 
+table td.image {
+    width: 75px;
+}
+
 table td.name {
-    min-width: 40px;
+    font-size: 14px;
+    font-weight: 700;
+    width:120px;
+    vertical-align: bottom;  
 }
 
 table tr.shadedrow {
@@ -57,13 +64,13 @@ table tr.shadedrow {
 }
 
 .comment {
-    padding: 0px 0px 20px 0px
+    padding: 10px 0px 0px 0px
 }
 
 span {
 
-    padding:2px 5px;
-    border-radius: 5px;
+    padding:1px 3px;
+    border-radius: 2px;
     color:#fff;
 
     &.R {
@@ -73,19 +80,71 @@ span {
     &.D {
      background-color: #336699;
     }
-
-    &.district {
-        display: block;
-        color: #666;
-        padding:2px 0px;
-    }
 }
 
-table td.name {
-    min-width: 120px;
-    font-weight: 700;
-    font-size: 14px;    
+.title {
+    font-size:12px;
+    margin:0;
 }
+
+
+.questionbtn {
+    background-color: #6d6f73;
+    color: white;
+    padding: 10px;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+    width: 50vw;
+    margin: 0px 25vw;
+}
+
+
+.questionbtn:hover, .questionbtn:focus {
+    background-color: #888b90;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    width:50vw;
+    margin:0 25vw;
+}
+
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;   
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {color: #EC0101}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+
+
+.graphic-head {
+    background-color: #f2f2f2;
+    /*color: #fff;*/
+    border-bottom: 2px solid red;
+    padding:5px;
+    
+}
+
 
 /* responsive table */
 @media screen and (max-width: 600px) {
@@ -114,6 +173,14 @@ table td.name {
         &.comment {
             min-height: 100px;
             padding: 0px;
+            margin-top:10px;
+            border:none;
+        }
+
+        &.name {
+            min-height: 100px;
+            width:200px;
+            margin:0;
         }
     }
 
@@ -134,11 +201,10 @@ table td.name {
 
     table tr td:first-child {
         font-size: 16px;
-        color: #333;
         font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
         font-weight: 700;
         letter-spacing: 0.02em;
-        text-transform: uppercase;
+        /*text-transform: uppercase;*/
     }
     table tr td:first-child:before {
         content: '';
@@ -149,8 +215,18 @@ table td.name {
         margin-right: 10px;
     }
 
-    .comment {
+    .questionbtn {
+        width:70vw;
+        margin:0px 15vw;
+    }
+
+    .dropdown-content {
+        width:70vw;
+        margin:0px 15vw;
+    }
+
+    /*.comment {
         margin-left: 80px;
         padding: 0px 0px 20px 0px
-    }
+    }*/
 }
