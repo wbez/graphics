@@ -2,8 +2,20 @@
 
 {% block content %}
 
+<div class="graphic-head">
+
     {% if COPY.labels.headline %}<h1>{{ COPY.labels.headline }}</h1>{% endif %}
     {% if COPY.labels.subhed %}<h2>{{ render(COPY.labels.subhed) }}</h2>{% endif %}
+
+    <div class="dropdown">
+                <button onclick="linkDown()" class="questionbtn" id="topbtn">Jump to a candidate...</button>
+                      <div id="questions-dropdown" class="dropdown-content">
+                        {% for row in COPY.people %}  
+                        <a href="#{{ row.name_first|classify }}-{{ row.name_last|classify }}" target="_self">{{ row.name_first }} {{ row.name_last }} </a> 
+                        {% endfor %}
+                      </div>
+            </div>
+    </div>
 
     <div id="graphic">
         <table>
@@ -14,130 +26,17 @@
                 {% endfor %}
             -->
 
-            <div class="dropdown">
-                <button onclick="linkDown()" class="questionbtn">Jump to a question...</button>
-                      <div id="questions-dropdown" class="dropdown-content">
-                        {% for row in COPY.questions %}  
-                        <a href="#{{ row.value|classify }}">{{ row.value }}</a> 
-                        {% endfor %}
-                      </div>
-            </div>
-
             </thead>
-
-            
-                <tr class="question">
-                    <td class="spacer" colspan="5" id="{{ COPY.questions.question_a|classify }}"> {{ COPY.questions.question_a }}</td>
-                </tr>
                 
                 {% for row in COPY.people %}    
         
-                <tr class="rep-{{ row.name_first|classify }}-{{ row.name_last|classify }}">
-                    <td data-title="{{ COPY.labels.hdr_name }}" class="image"> <img src="images/{{row.image}}" /> </td>
+                <tr id="{{ row.name_first|classify }}-{{ row.name_last|classify }}">
+                    <td data-title="{{ COPY.labels.hdr_name }}" class="image"> <img src="{{row.image}}" /> </td>
                     
                     <td data-title="{{ COPY.labels.hdr_name }}" class="name">{{ row.name_first }} {{ row.name_last }} <span class="{{ row.party }}">{{ row.party }}</span> <p class="title"> {{ row.title }}</p> </td>
 
                     <td data-title="{{ COPY.labels.hdr_comment }}" class="comment">{{ row.answer_a}}</td> 
                 </tr>
-
-                {% endfor %}
-
-                <!--SECOND QUESTION--> 
-
-                <tr class="question">
-                    <td class="spacer" colspan="5" id="{{ COPY.questions.question_b|classify }}"> {{ COPY.questions.question_b }}</td>
-                </tr>
-                
-                {% for row in COPY.people %}    
-            
-                <tr class="rep-{{ row.name_first|classify }}-{{ row.name_last|classify }}">
-                    <td data-title="{{ COPY.labels.hdr_name }}"> <img src="images/{{row.image}}" /> </td>
-                    <td data-title="{{ COPY.labels.hdr_name }}" class="name">{{ row.name_first }} {{ row.name_last }} <span class="{{ row.party }}">{{ row.party }}</span> <p class="title"> {{ row.title }}</p> </td>
-                    <td data-title="{{ COPY.labels.hdr_comment }}" class="comment">{{ row.answer_b}}</td> </tr>
-
-                {% endfor %}
-
-                <!--THIRD QUESTION--> 
-                <tr class="question">
-                    <td class="spacer" colspan="5" id="{{ COPY.questions.question_c|classify }}"> {{ COPY.questions.question_c }}</td>
-                </tr>
-                
-                {% for row in COPY.people %}    
-            
-                <tr class="rep-{{ row.name_first|classify }}-{{ row.name_last|classify }}">
-                    <td data-title="{{ COPY.labels.hdr_name }}" class="image"> <img src="images/{{row.image}}" /> </td>
-                    <td data-title="{{ COPY.labels.hdr_name }}" class="name">{{ row.name_first }} {{ row.name_last }} <span class="{{ row.party }}">{{ row.party }}</span> <p class="title"> {{ row.title }}</p> </td>
-                    <td data-title="{{ COPY.labels.hdr_comment }}" class="comment">{{ row.answer_c}}</td> </tr>
-
-                {% endfor %}
-
-                <!--FOURTH QUESTION--> 
-                <tr class="question">
-                    <td class="spacer" colspan="5" id="{{ COPY.questions.question_d|classify }}"> {{ COPY.questions.question_d }}</td>
-                </tr>
-                
-                {% for row in COPY.people %}    
-            
-                <tr class="rep-{{ row.name_first|classify }}-{{ row.name_last|classify }}">
-                    <td data-title="{{ COPY.labels.hdr_name }}" class="image"> <img src="images/{{row.image}}" /> </td>
-                    <td data-title="{{ COPY.labels.hdr_name }}" class="name">{{ row.name_first }} {{ row.name_last }} <span class="{{ row.party }}">{{ row.party }}</span> <p class="title"> {{ row.title }}</p> </td>
-                    <td data-title="{{ COPY.labels.hdr_comment }}" class="comment">{{ row.answer_d}}</td> </tr>
-
-                {% endfor %}
-
-                 <!--FIFTH QUESTION--> 
-                <tr class="question">
-                    <td class="spacer" colspan="5" data-title="{{ COPY.questions.question_e|classify }}"> {{ COPY.questions.question_e }}</td>
-                </tr>
-                
-                {% for row in COPY.people %}    
-            
-                <tr class="rep-{{ row.name_first|classify }}-{{ row.name_last|classify }}">
-                    <td data-title="{{ COPY.labels.hdr_name }}" class="image"> <img src="images/{{row.image}}" /> </td>
-                    <td data-title="{{ COPY.labels.hdr_name }}" class="name">{{ row.name_first }} {{ row.name_last }} <span class="{{ row.party }}">{{ row.party }}</span> <p class="title"> {{ row.title }}</p> </td>
-                    <td data-title="{{ COPY.labels.hdr_comment }}" class="comment">{{ row.answer_e}}</td> </tr>
-
-                {% endfor %}
-
-                <!--SIXTH QUESTION--> 
-                <tr class="question">
-                    <td class="spacer" colspan="5" data-title="{{ COPY.questions.question_f|classify }}"> {{ COPY.questions.question_f }}</td>
-                </tr>
-                
-                {% for row in COPY.people %}    
-            
-                <tr class="rep-{{ row.name_first|classify }}-{{ row.name_last|classify }}">
-                    <td data-title="{{ COPY.labels.hdr_name }}" class="image"> <img src="images/{{row.image}}" /> </td>
-                    <td data-title="{{ COPY.labels.hdr_name }}" class="name">{{ row.name_first }} {{ row.name_last }} <span class="{{ row.party }}">{{ row.party }}</span> <p class="title"> {{ row.title }}</p> </td>
-                    <td data-title="{{ COPY.labels.hdr_comment }}" class="comment">{{ row.answer_f}}</td> </tr>
-
-                {% endfor %}
-
-                <!--SEVENTH QUESTION--> 
-                <tr class="question">
-                    <td class="spacer" colspan="5" data-title="{{ COPY.questions.question_g|classify }}"> {{ COPY.questions.question_g }}</td>
-                </tr>
-                
-                {% for row in COPY.people %}    
-            
-                <tr class="rep-{{ row.name_first|classify }}-{{ row.name_last|classify }}">
-                    <td data-title="{{ COPY.labels.hdr_name }}" class="image"> <img src="images/{{row.image}}" /> </td>
-                    <td data-title="{{ COPY.labels.hdr_name }}" class="name">{{ row.name_first }} {{ row.name_last }} <span class="{{ row.party }}">{{ row.party }}</span> <p class="title"> {{ row.title }}</p> </td>
-                    <td data-title="{{ COPY.labels.hdr_comment }}" class="comment">{{ row.answer_g}}</td> </tr>
-
-                {% endfor %}
-
-                <!--EIGHT QUESTION--> 
-                <tr class="question">
-                    <td class="spacer" colspan="5" data-title="{{ COPY.questions.question_h|classify }}"> {{ COPY.questions.question_h }}</td>
-                </tr>
-                
-                {% for row in COPY.people %}    
-            
-                <tr class="rep-{{ row.name_first|classify }}-{{ row.name_last|classify }}">
-                    <td data-title="{{ COPY.labels.hdr_name }}" class="image"> <img src="images/{{row.image}}" /> </td>
-                    <td data-title="{{ COPY.labels.hdr_name }}" class="name">{{ row.name_first }} {{ row.name_last }} <span class="{{ row.party }}">{{ row.party }}</span> <p class="title"> {{ row.title }}</p> </td>
-                    <td data-title="{{ COPY.labels.hdr_comment }}" class="comment">{{ row.answer_h}}</td> </tr>
 
                 {% endfor %}
 

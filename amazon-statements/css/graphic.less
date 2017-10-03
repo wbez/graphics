@@ -42,7 +42,8 @@ table td.image {
 table td.name {
     font-size: 14px;
     font-weight: 700;
-    width:150px;  
+    width:120px;
+    vertical-align: bottom;  
 }
 
 table tr.shadedrow {
@@ -86,34 +87,29 @@ span {
     margin:0;
 }
 
-.question {
-    background-color: #6D6F73;
-    color:#fff;
-}
-
 
 .questionbtn {
-    background-color: #4CAF50;
+    background-color: #6d6f73;
     color: white;
-    padding: 16px;
-    font-size: 16px;
+    padding: 10px;
+    font-size: 12px;
     border: none;
     cursor: pointer;
+    width: 50vw;
+    margin: 0px 25vw;
 }
 
 
-/* Dropdown button on hover & focus */
 .questionbtn:hover, .questionbtn:focus {
-    background-color: #3e8e41;
+    background-color: #888b90;
 }
 
-/* The container <div> - needed to position the dropdown content */
 .dropdown {
     position: relative;
     display: inline-block;
+    margin-bottom: 20px;
 }
 
-/* Dropdown Content (Hidden by Default) */
 .dropdown-content {
     display: none;
     position: absolute;
@@ -121,25 +117,33 @@ span {
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    width:50vw;
+    margin:0 25vw;
 }
 
-/* Links inside the dropdown */
+
 .dropdown-content a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
-    display: block;
-
-    &:hover {background-color: #f1f1f1}
+    display: block;   
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown-content a:hover {color: #EC0101}
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
 
 
+
+.graphic-head {
+    background-color: #f2f2f2;
+    /*color: #fff;*/
+    border-bottom: 2px solid red;
+    padding:5px;
+    
+}
 
 
 /* responsive table */
@@ -170,6 +174,7 @@ span {
             min-height: 100px;
             padding: 0px;
             margin-top:10px;
+            border:none;
         }
 
         &.name {
@@ -196,11 +201,10 @@ span {
 
     table tr td:first-child {
         font-size: 16px;
-        /*color: #333;*/
         font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
         font-weight: 700;
         letter-spacing: 0.02em;
-        text-transform: uppercase;
+        /*text-transform: uppercase;*/
     }
     table tr td:first-child:before {
         content: '';
@@ -209,6 +213,16 @@ span {
     #graphic img {
         float:left;
         margin-right: 10px;
+    }
+
+    .questionbtn {
+        width:70vw;
+        margin:0px 15vw;
+    }
+
+    .dropdown-content {
+        width:70vw;
+        margin:0px 15vw;
     }
 
     /*.comment {

@@ -17,7 +17,8 @@ window.onload = onWindowLoaded;
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
 function linkDown() {
-    document.getElementById("questions-dropdown").classList.toggle("show");
+    document.getElementById("questions-dropdown").classList.toggle("show")
+    ;
 }
 
 // Close the dropdown menu if the user clicks outside of it
