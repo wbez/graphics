@@ -5,26 +5,11 @@
 <div class="graphic-head">
 
     {% if COPY.labels.headline %}<h1>{{ COPY.labels.headline }}</h1>{% endif %}
-    {% if COPY.labels.subhed %}<h2>{{ render(COPY.labels.subhed) }}</h2>{% endif %}
-
-    <div class="dropdown">
-                <button onclick="linkDown()" class="questionbtn" id="topbtn">Jump to a candidate...</button>
-                      <div id="questions-dropdown" class="dropdown-content">
-                        {% for row in COPY.people %}  
-                        <a href="#{{ row.name_first|classify }}-{{ row.name_last|classify }}" target="_self">{{ row.name_first }} {{ row.name_last }} </a> 
-                        {% endfor %}
-                      </div>
-            </div>
     </div>
 
     <div id="graphic">
         <table>
             <thead>
-            <!-- buttoned questions
-                {% for row in COPY.questions %}  
-                <a href="#{{ row.value|classify }}"><button class="question-button" type="button"> {{ row.value }} </button></a> 
-                {% endfor %}
-            -->
 
             </thead>
                 
@@ -33,7 +18,7 @@
                 <tr id="{{ row.name_first|classify }}-{{ row.name_last|classify }}">
                     <td data-title="{{ COPY.labels.hdr_name }}" class="image"> <img src="{{row.image}}" /> </td>
                     
-                    <td data-title="{{ COPY.labels.hdr_name }}" class="name">{{ row.name_first }} {{ row.name_last }} <span class="{{ row.party }}">{{ row.party }}</span> <p class="title"> {{ row.title }}</p> </td>
+                    <td data-title="{{ COPY.labels.hdr_name }}" class="name">{{ row.name_first }} {{ row.name_last }} <span class="{{ row.party }}">{{ row.party }}</span> </td>
 
                     <td data-title="{{ COPY.labels.hdr_comment }}" class="comment">{{ row.answer_a}}</td> 
                 </tr>

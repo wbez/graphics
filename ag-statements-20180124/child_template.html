@@ -1,0 +1,46 @@
+{% extends 'base_template.html' %}
+
+{% block content %}
+
+    <div id="graphic" class="graphic">
+        {% for row in COPY.data %}
+        <div class="candidate-row">
+            <div class="candidate-container">
+                <img class="candidate-image" src="images/{{ row.image }}"/>
+                <div class="candidate-title">
+                <h4 class="candidate-name" id="{{ row.candidate_id }}"> {{ row.name }}  <span class="party {{row.party}}">{{ row.party }} </span> </h4>
+                <p> {{ row.title }}</p>
+                </div>
+            </div>
+
+
+            <div class="statement">
+                 {% if row.header %}
+                <h3> {{ row.header }} </h3>
+                {% endif %}
+                <p> {{ row.statement }}</p>
+                {% if row.extra %}
+                <p class="extra"> <em>{{ row.extra }} </em></p> 
+                {% endif  %}
+                
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+
+    </div>
+
+    {% if COPY.labels.footnote %}
+    <div class="footnotes">
+        <h4>Notes</h4>
+        <p>{{ COPY.labels.footnote|smarty }}</p>
+    </div>
+    {% endif %}
+
+    <div class="footer">
+        {% if COPY.labels.credit %}<p>Image credit: {{ COPY.labels.credit|smarty }}</p>{% endif %}
+    </div>
+
+{% endblock content %}

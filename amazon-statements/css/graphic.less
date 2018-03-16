@@ -5,7 +5,7 @@ table {
     border-collapse: collapse;
     padding: 0;
     width: 100%;
-    font-size: 12px;
+    font-size: 14px;
     color: #666;
 }
 table th,
@@ -40,10 +40,10 @@ table td.image {
 }
 
 table td.name {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 700;
-    width:120px;
-    vertical-align: bottom;  
+    width:160px;
+    vertical-align: top;  
 }
 
 table tr.shadedrow {
@@ -87,56 +87,6 @@ span {
     margin:0;
 }
 
-
-.questionbtn {
-    background-color: #6d6f73;
-    color: white;
-    padding: 10px;
-    font-size: 12px;
-    border: none;
-    cursor: pointer;
-    width: 50vw;
-    margin: 0px 25vw;
-}
-
-
-.questionbtn:hover, .questionbtn:focus {
-    background-color: #888b90;
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-    margin-bottom: 20px;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    width:50vw;
-    margin:0 25vw;
-}
-
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;   
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {color: #EC0101}
-
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;}
-
-
-
 .graphic-head {
     background-color: #f2f2f2;
     /*color: #fff;*/
@@ -147,7 +97,7 @@ span {
 
 
 /* responsive table */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 584px) {
     table,
     tbody {
         display: block;
@@ -179,7 +129,7 @@ span {
 
         &.name {
             min-height: 100px;
-            width:200px;
+            width:230px;
             margin:0;
         }
     }
@@ -213,16 +163,6 @@ span {
     #graphic img {
         float:left;
         margin-right: 10px;
-    }
-
-    .questionbtn {
-        width:70vw;
-        margin:0px 15vw;
-    }
-
-    .dropdown-content {
-        width:70vw;
-        margin:0px 15vw;
     }
 
     /*.comment {

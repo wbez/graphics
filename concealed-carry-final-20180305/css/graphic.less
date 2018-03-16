@@ -1,0 +1,76 @@
+@import "base";
+
+.g-annotation{
+	opacity:0.0;
+    padding: 20px;
+    transform: translate(-30px);
+    border: 1px solid red;
+    background-color:#fceaea;
+	-webkit-transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+    -ms-transition: all 500ms ease-in-out;
+    -o-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
+}
+
+.g-copy {
+    -webkit-font-smoothing:antialiased;
+}
+
+@media (max-width:300px) {
+    .g-annotation {
+        padding:10px;
+        margin:10px;
+    }
+}
+
+@keyframes hover-me {
+    0%   {color:red;opacity:1.0;}
+    50% {color:red;opacity:0.5}
+    75% {opacity:0.75;}
+    100% {color:red; opacity:0.9;}
+}
+
+@keyframes underline{
+	from {text-decoration:none;}
+	to {text-decoration: underline;}
+}
+
+.annotation-trigger {
+	animation: hover-me 2s infinite ease-in-out;
+}
+
+.annotation-trigger:hover {
+	animation-name: color;
+	animation-duration:2s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+
+}
+
+.show {
+	opacity:1.0;
+}
+
+.selected {
+    animation-iteration-count: 0;
+    color:red;
+    opacity:0.5;
+}
+
+
+// ai2html artboard sizes
+
+#g-ai2html-graphic-Artboard_2 { display: none; }
+
+// ai2html artboard sizes
+@media screen and (min-width: 585px) {
+    #g-ai2html-graphic-Artboard_2 { display: none; }
+}
+
+@media screen and (max-width: 584px) {
+    #g-ai2html-graphic-Artboard_1 { display: none; }
+    #g-ai2html-graphic-Artboard_2 { display: block; }
+}
+
+// Add custom styles here
