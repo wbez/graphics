@@ -6,42 +6,57 @@
 
 {% block content %}
 
-    {% if COPY.labels.headline %}<h1>{{ COPY.labels.headline|smarty }}</h1>{% endif %}
-    {% if COPY.labels.subhed %}<h2>{{ render(COPY.labels.subhed)|smarty }}</h2>{% endif %}
-
     <div class="graphic">
-        <table id="school-table">
+        <div class="search">
+            <h4> Search  <input type="text" id="search-table"></h4> 
+        </div>
+        <div class="key">
+            <ul class="key">
+                <li><strong>Most competitive high schools:</strong> Jones, Lane, Northside, Payton, and Whitney Young </li>
+                <li><strong>Mid-level:</strong> Brooks, Hancock, Lindblom, and Westinghouse </li>
+                <li><strong>Less competitive:</strong> King and South Shore </li> 
+                <li><strong>Total:</strong> All 11 selective enrollment high schools </li>
+            <ul>
+        </div>
+        
+        <table id="school-table" style="width:585px !important;">
             <thead>
                 <tr>
                     <th>
                         <div class="sorter"><div class="icon"></div></div>
-                        <div class="header">{{ COPY.labels.hdr_state }}</div>
+                        <div class="header">{{ COPY.labels.hdr_name }}</div>
                     </th>
-                    <th>
-                        <div class="sorter"><div class="icon"></div></div>
-                        <div class="header">{{ COPY.labels.hdr_usps }}</div>
-                    </th>
-                    <th>
-                        <div class="sorter"><div class="icon"></div></div>
-                        <div class="header">{{ COPY.labels.hdr_ap }}</div>
+                    <th class="amt">
+                        <div class="sorter"><div class="icon" ></div></div>
+                        <div class="header">{{ COPY.labels.hdr_most}}</div>
                     </th>
                     <th class="amt">
                         <div class="sorter"><div class="icon"></div></div>
-                        <div class="header">{{ COPY.labels.hdr_value }}</div>
+                        <div class="header">{{ COPY.labels.hdr_mid }}</div>
+                    </th>
+                    <th class="amt">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header">{{ COPY.labels.hdr_least }}</div>
+                    </th>
+                    <th class="amt">
+                        <div class="sorter"><div class="icon"></div></div>
+                        <div class="header ">{{ COPY.labels.hdr_total }}</div>
                     </th>
                 </tr>
             </thead>
 
             {% for row in COPY.data %}
-            <tr class="state-{{ row.usps|classify }}">
-                <td data-title="{{ COPY.labels.hdr_state }}">{{ row.name }}</td>
-                <td data-title="{{ COPY.labels.hdr_usps }}">{{ row.usps }}</td>
-                <td data-title="{{ COPY.labels.hdr_ap }}">{{ row.usps|ap_state }}</td>
-                <td data-title="{{ COPY.labels.hdr_value }}" class="amt">{{ row.value|comma }}</td>
+            <tr class="school">
+                <td data-title="{{ COPY.labels.hdr_name }}">{{ row.name }}</td>
+                <td data-title="{{ COPY.labels.hdr_most }}" class="amt">{{ row.most|comma }} %</td>
+                <td data-title="{{ COPY.labels.hdr_mid }}" class="amt">{{ row.mid|comma }} %</td>
+                <td data-title="{{ COPY.labels.hdr_least }}" class="amt">{{ row.least|comma }} %</td>
+                <td data-title="{{ COPY.labels.hdr_total }}" class="amt">{{ row.total|comma }} %</td>
             </tr>
             {% endfor %}
 
         </table>
+        <p class="key"> {{ COPY.labels.note_gifted }}</p>
     </div>
 
     {% if COPY.labels.footnote %}

@@ -2,10 +2,20 @@
  * Initialize the graphic.
  */
 var onWindowLoaded = function() {
-    // Uncomment to enable column sorting
-    // var tablesort = new Tablesort(document.getElementById('state-table'));
 
-    pymChild = new pym.Child({});
+     schoolTable = $('#school-table').DataTable({
+        paging: false,
+        scrollY: 400,
+        scrollX: false,
+        ordering: false,
+        info:     false,
+     });
+
+     $('#search-table').keyup(function(){
+      schoolTable.search($(this).val()).draw() ;
+  });
+
+     pymChild = new pym.Child({});
 
     pymChild.onMessage('on-screen', function(bucket) {
         ANALYTICS.trackEvent('on-screen', bucket);
@@ -14,13 +24,6 @@ var onWindowLoaded = function() {
         data = JSON.parse(data);
         ANALYTICS.trackEvent('scroll-depth', data.percent, data.seconds);
     });
-
-     $('#school-table').DataTable({
-        paging: false,
-        scrollY: 400,
-        ordering: false,
-        info:     false
-     });
 }
 
 

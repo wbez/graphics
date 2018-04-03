@@ -1,10 +1,61 @@
 @import "base";
 
-//filter styles
+h1 {
+    margin: 0 0px 20px 0px
+}
+
+.key {
+    margin:0px;
+    background:#d4d6d8;
+    padding:5px 10px;
+    -webkit-font-smoothing: antialiased;
+
+}
+
+//table styles
 .dataTables_wrapper .dataTables_filter {
-    float:initial;
-    text-align:center;
-    margin-bottom:20px;
+    display:none;
+}
+
+.dataTable{
+    width:585px;
+}
+
+.search {
+    /*text-align: center;*/
+    background:#eee;
+    padding:5px 20px;
+    margin:0;
+
+    input[type=text] {
+        width:200px;
+        padding: 5px;
+        margin: 10px;
+        box-sizing: border-box;
+        border-radius: 4px;
+        border: @bezgray 2px solid;
+
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
+
+        font-size:15px;
+        color:@bezgray;
+    }
+
+    input[type=text]:focus {
+        outline: none;
+        border: @bezred 2px solid;
+        border-radius: 4px;
+    }
+
+    h4 {
+        font-weight:700;
+        font-size:16px;
+        text-transform: uppercase;
+        padding:0;
+        margin:0;
+
+    }
 }
 
 // Base table styles
@@ -12,7 +63,7 @@ table {
     border-collapse: collapse;
     padding: 0;
     width: 100%;
-    font-size: 12px;
+    font-size: 15px;
     color: #666;
 
     tr.shadedrow {
@@ -21,18 +72,34 @@ table {
         font-weight: bold;
     }
 
+    thead {
+        background: @bezdark;
+        color:white;
+        padding-top:20px;
+
+        .table-subhed {
+            background:@bezgray;
+        }
+    }
+
     th {
         border-bottom: 2px solid #eee;
         vertical-align: bottom;
         font-family: 'Knockout 31 4r', Helvetica, Arial, sans-serif;
         font-weight: normal;
         text-transform: uppercase;
+        font-size:12px;
         text-align: left;
-        padding: 0 10px 10px 10px;
-        padding-top: 0;
+        padding:0;
+        padding-top: 20px;
         line-height: 1.2;
         letter-spacing: 0.05em;
         -webkit-font-smoothing: antialiased;
+
+        .sub-header {
+            text-align:center;
+            font-weight:400;
+        }
     }
 
     td {
@@ -44,7 +111,7 @@ table {
     th,
     td {
         &.amt {
-            text-align: right;
+            text-align: center;
         }
     }
 }
@@ -95,6 +162,13 @@ table {
 
 // Mobile styles
 @media screen and (max-width: 500px) {
+
+    .search input[type=text] {
+    width: 180px;
+    padding: 5px;
+    margin: 10px;
+
+}
     tbody {
         display: block;
         width: 100%;
@@ -137,10 +211,11 @@ table {
         }
 
         tr td:first-child {
-            font-size: 14px;
+            font-size: 18px;
+            background-color:@lightgray;
             margin-bottom: 6px;
             color: #333;
-            font-family: 'Knockout 31 4r', Helvetica, Arial, sans-serif;
+            font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
             font-weight: 500;
             letter-spacing: 0.02em;
             text-transform: uppercase;
