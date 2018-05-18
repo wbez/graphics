@@ -1,0 +1,67 @@
+@import "base";
+
+h2 {
+    line-height:1.8;
+}
+
+.question {
+    display:flex;
+    flex-flow:row wrap;
+    justify-content:center;
+
+    p, h3, h2 {  
+        margin:0.5em;
+    }
+
+    h2 {
+        text-align:center;
+        margin: 20px 0;
+        color:@gray;
+        font-weight:700;
+    }
+}
+
+.header {
+    flex:1 100%;
+    font-size:16px;
+}
+
+.proposal {
+    flex: 1 49%;
+    background-color:@secondary-gray*1.2;
+    margin:.5%;
+}
+
+.label {
+    font-weight:700;
+    margin-top:10px;
+    padding: 5px;
+    letter-spacing: .1em;
+}
+
+h2 .label {
+    padding:2px 5px 2px 8px;
+    margin:3px;
+}
+
+.CCOC {
+    background-color:#cca7a2;
+}
+
+.CPAC {
+    background-color: #E89382;
+}
+
+.CCPSA{
+    background-color: #EDB97D;
+}
+
+.CCPC{
+    background-color:  #FCDC8D ;
+}
+
+@media (min-width:585px) {
+    .proposal {
+        flex: 1 22%;
+    } 
+}

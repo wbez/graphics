@@ -1,0 +1,43 @@
+{% extends 'base_template.html' %}
+
+{% block content %}
+
+    {% if COPY.labels.headline %}<h1>{{ COPY.labels.headline|smarty }}</h1>{% endif %}
+    {% if COPY.labels.subhed %}<h2>{{ render(COPY.labels.subhed)|smarty }}</h2>{% endif %}
+    
+    <div class="graphic">
+
+        {% for row in COPY.info %}
+            <div class="question">
+                <h2 class="header"> {{ row.header }}</h2>
+                <div class="proposal"><h3 class="label CCOC">CCOC</h3> <p>{{ row.CCOC }} </p></div>
+                <div class="proposal"><h3 class="label CCPC">CCPC</h3> <p>{{ row.CCPC }} </p></div>
+                <div class="proposal"><h3 class="label CPAC">CPAC</h3> <p>{{ row.CPAC }} </p></div>
+                <div class="proposal"><h3 class="label CCPSA">CCPSA</h3> <p>{{ row.CCPSA }} </p></div>
+            </div>
+        {% endfor %}
+
+    </div>
+
+    {% if COPY.labels.footnote %}
+    <div class="footnotes">
+        <h4>Notes</h4>
+        <p>{{ COPY.labels.footnote|smarty }}</p>
+    </div>
+    {% endif %}
+
+    <div class="footer">
+        {% if COPY.labels.source %}<p>Source: {{ COPY.labels.source|smarty }}</p>{% endif %}
+        {% if COPY.labels.credit %}<p>Credit: {{ COPY.labels.credit|smarty }}</p>{% endif %}
+    </div>
+
+{% endblock content %}
+
+{% block js %}
+
+    {{ JS.push('js/lib/tablesort.js') }}
+    {{ JS.push('js/lib/tablesort.numeric.js') }}
+    {{ JS.push('js/graphic.js') }}
+    {{ JS.render('js/graphic-footer.js') }}
+
+{% endblock js %}

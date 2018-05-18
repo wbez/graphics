@@ -2,6 +2,19 @@
 node_modules/
 build/
 *.shp
+*.pyc
+
+#ignore rendered files
+**/index.html
+**/child.html
+**/assets/*
+**/*/assets/*
+!**/assets/assetsignore
+**/css/graphic-header.css
+**/js/parent-header.js
+**/js/parent-footer.js
+**/js/graphic-header.js
+**/js/graphic-footer.js
 
 # Unpublished graphics
 building-permits-pop-table/
