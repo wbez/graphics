@@ -1,0 +1,96 @@
+
+@import "base";
+
+.graphic-wrapper {
+    max-width:600px;
+}
+
+// Add custom styles here
+.years-wrapper {
+    display:flex;
+    flex-flow:row wrap;
+    justify-content:center;
+}
+.item-wrapper {
+    border: solid 0.5px gray;
+    padding: 2%;
+    display:flex;
+    flex-basis:40%;
+    flex-flow:row wrap;
+    margin:1%;
+    text-align:center;
+}
+
+.grid {
+    flex-basis:50%;
+    max-height:200px;
+}
+
+.labels {
+    position:initial;
+    text-align:center;
+    margin:0 0 12px 0;
+}
+
+h3 {
+    text-transform: initial;
+    margin-bottom:20px;
+}
+
+.year-label {
+    align-self:center;
+    flex-basis:100%;
+
+    h2 {
+        font-size:15px;
+        margin-bottom: 5px;
+        font-weight:900;
+        color:@gray;
+    }
+}
+
+rect{
+    stroke: gray;
+    stroke-width: .5px;
+    shape-rendering: geometricPrecision;
+}
+
+.graphic {
+    width:45%;
+    margin:auto;
+}
+
+.key {
+    text-align:center;
+    margin:0 0 5px 0;
+
+    .key-item {
+        margin:0 5px;
+    
+        display:inline;
+    
+    
+        &:last-child {
+            margin-right:0;
+        }
+    
+        svg {
+            max-width:1em;
+            margin-right:.2em;
+        }
+    }
+}
+
+
+
+ul, li {
+    margin:0;
+    padding:0;
+    min-width:20px;
+}
+
+
+
+@media (max-width: 340px) {
+    h3 {font-size:10px;}
+}
