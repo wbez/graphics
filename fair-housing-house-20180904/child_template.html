@@ -1,0 +1,42 @@
+{% extends 'base_template.html' %}
+
+{% block content %}
+
+    {% if COPY.labels.headline %}<h1>{{ COPY.labels.headline|smarty }}</h1>{% endif %}
+    {% if COPY.labels.subhed %}<h2>{{ render(COPY.labels.subhed)|smarty|safe }}</h2>{% endif %}
+
+    <div id="graphic" class="graphic" aria-describedby="housing-info">
+        {% include 'ai2html-graphic.html' %}
+        <div id="housing-info" class="hidden">
+            <ul>
+                <h3> What accessibility looks like under the Fair Housing Act</h3>
+                <p>Multifamily housing built after March 13, 1991 is subject to certain accessibility requirements under the Fair Housing Act. Here's a look at some of those <a href="https://www.hud.gov/program_offices/fair_housing_equal_opp/disabilities/fhefhag"> guidelines. </a></p>
+                <li>Kitchens and bathrooms with enough space to move around in a wheelchair</li>
+                <li>Lights switches, outlets, and thermostats are accessible</li>
+                <li>Bathrooms have reinforced walls, so grab bars can be installed</li>
+                <li>Public spaces are accessible</li>
+                <li>Accessible entrance</li>
+                <li>Doors wide enough to fit a wheelchair</li>
+                <li>Building can be reached on a route without obstacles or excessive slope</li>
+            </ul>
+        </div>
+    </div>
+
+    {% if COPY.labels.footnote %}
+    <div class="footnotes">
+        <h4>Notes</h4>
+        <p>{{ COPY.labels.footnote|smarty }}</p>
+    </div>
+    {% endif %}
+
+    <div class="footer">
+        {% if COPY.labels.source %}<p>Source: {{ COPY.labels.source|smarty|safe }}</p>{% endif %}
+        {% if COPY.labels.credit %}<p>Credit: {{ COPY.labels.credit|smarty }}</p>{% endif %}
+    </div>
+
+{% endblock content %}
+
+{% block js %}
+    {{ JS.push('js/graphic.js') }}
+    {{ JS.render('js/graphic-footer.js') }}
+{% endblock js %}

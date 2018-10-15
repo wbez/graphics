@@ -1,0 +1,71 @@
+{% extends 'base_template.html' %}
+
+{% block content %}
+
+    <div class="graphic-head">
+
+        {% include 'compare-top.html' %}
+        <!-- <div class="img-container">
+            <img src="assets/video-gambling.jpg" >
+            <h3> Video Poker</h3>
+        </div>
+        <div class="img-container">
+            <img src="assets/sweepstakes.jpg" >
+            <h3> Sweepstakes</h3>
+        </div> -->
+    </div>
+
+    {% if COPY.labels.headline %}<h1>{{ COPY.labels.headline|smarty }}</h1>{% endif %}
+    {% if COPY.labels.subhed %}<h2>{{ render(COPY.labels.subhed)|smarty }}</h2>{% endif %}
+
+    <div id="graphic" class="graphic">
+        <table>
+            <tbody class="graphic-body">
+                {% for item in COPY.data %}
+                <tr colspan="2"> <th colspan="2">{{item.question }} </th></tr>
+                <tr>
+                    <td>
+                    <h3>Video Poker </h3>
+                    {{ item.video_poker }}
+                    </td>
+                    <td>
+                        <h3> Sweepstakes </h3>
+                        {{ item.sweepstakes }}
+                    </td>
+                    {% endfor %}
+                </tr>
+            </tbody>
+        </table>
+        <!-- {% for item in COPY.data %}
+        <div class="graphic-item">
+            <div class="graphic-head">
+                <img src="assets/video-poker-sweepstakes.jpg" >
+                <h3> {{ item.name }} </h3>
+            </div>
+            <div class="graphic-body">
+                <
+                <p> {{ item.legal | safe }}</p>
+                <h4> regulations: </h4>
+                {% if item.regulations %}
+                {{item.regulations |safe }}
+                {% else %}
+                None
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %} -->
+    </div>
+
+    {% if COPY.labels.footnote %}
+    <div class="footnotes">
+        <h4>Notes</h4>
+        <p>{{ COPY.labels.footnote|smarty }}</p>
+    </div>
+    {% endif %}
+
+    <div class="footer">
+        {% if COPY.labels.source %}<p>Source: {{ COPY.labels.source|smarty }}</p>{% endif %}
+        {% if COPY.labels.credit %}<p>Credit: {{ COPY.labels.credit|smarty }}</p>{% endif %}
+    </div>
+
+{% endblock content %}

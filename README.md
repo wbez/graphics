@@ -5,11 +5,33 @@ A list of graphics on wbez.org built with [NPR App's DailyGraphics rig](https://
 
 ###2018
 
+['Once Known For English Immersion, Charter Network Remakes Itself'](https://www.wbez.org/shows/wbez-news/once-known-for-english-immersion-charter-network-remakes-itself/8eff9ca3-f126-4d84-b1c3-aee72e7e4dd9)
+slugs: cps-demographics-20180627
+
+
+['Nearly All Chicago Charter High Schools Have Room For Students Ranking Them Their Top Choice'](https://www.wbez.org/shows/wbez-news/nearly-all-chicago-charter-high-schools-have-room-for-students-ranking-them-their-top-choice/eca81da9-8a3c-4f70-bb98-988cdb22901a)
+slugs:charter-demand-20180925, charter-demand-bar-20180925
+
+
+['‘Slot Style Games’ Make A Mockery Of Illinois’ Video Poker Law'](https://www.wbez.org/shows/wbez-news/slot-style-games-make-a-mockery-of-illinois-video-poker-law/69d1c814-9038-461a-baac-e376fd619df5)
+slugs:video-poker-compare-20180801
+
+
+['Disability, Not Race, Leads Housing Discrimination Complaints In Chicago'](https://www.wbez.org/shows/wbez-news/disability-not-race-leads-housing-discrimination-complaints-in-chicago/cfbce40d-bd78-420a-af47-a5e5337cd402)
+slugs: fair-housing-rights-20180904, fair-housing-house-20180904, fair-housing-disability-20180828
+
+
+['The People And Institutions Tied To The Death Of Laquan McDonald And Trial Of Officer Jason Van Dyke'](http://16shots.wbez.org/people/index.html)
+slugs: cardbuilder-wireframe, cardbuilder-wireframe-20180823
+
+
 [‘Just because an elevator fails an inspection doesn’t mean it is dangerous’ -- City Hall](https://interactive.wbez.org/elevators/failed-inspections/)
 slugs: elevator-flow-20180523, elevator-grid-20180522
 
+
 [How Will Chicago Use Its Land Near The Obama Presidential Center?](https://www.wbez.org/shows/wbez-news/how-will-chicago-use-its-land-near-the-obama-presidential-center/9bf59010-42d0-4a2e-acc5-4dbc6094bc12)
 slug:woodlawn-land-20180501
+
 
 [Second Chance At Chicago’s Coveted Test-In Schools Benefits Wealthiest Kids](https://www.wbez.org/shows/wbez-news/second-chance-at-chicagos-coveted-testin-schools-benefits-wealthiest-kids/19347d82-5575-41f8-af3c-ce9e72574991)
 slug: principal-discretion-20180409
@@ -17,6 +39,7 @@ slug: principal-discretion-20180409
 
 [Which CPS Elementary Schools Send The Most Kids To Top High Schools?](https://www.wbez.org/shows/wbez-news/which-cps-elementary-schools-send-the-most-kids-to-top-high-schools/f8a51e7d-dcc5-42f5-ba24-1c357f0204a0)
 slug:selective-hs-search-20180313
+
 
 [How To Take In $33 Million In Taxpayer Dollars: Partner With The Catholic Church](https://www.wbez.org/shows/wbez-news/how-to-take-in-33-million-in-taxpayer-dollars-partner-with-the-catholic-church/91468342-1d17-416a-8a6e-c5b58472dba6)
 slug:scholarship-donations-20180219
