@@ -1,0 +1,30 @@
+{% extends 'base_template.html' %}
+
+{% block content %}
+
+    {% if COPY.labels.headline %}<h1>{{ COPY.labels.headline }}</h1>{% endif %}
+    {% if COPY.labels.subhed %}<h2>{{ render(COPY.labels.subhed) }}</h2>{% endif %}
+
+    <div id="graphic"><img src="fallback.png" alt="[Chart]" class="fallback" /></div>
+
+    {% if COPY.labels.footnote %}
+    <div class="footnotes">
+        <h4>Notes</h4>
+        <p>{{ COPY.labels.footnote }}</p>
+    </div>
+    {% endif %}
+
+    <div class="footer">
+        {% if COPY.labels.source %}<p>Source: {{ COPY.labels.source }}</p>{% endif %}
+        {% if COPY.labels.credit %}<p>Credit: {{ COPY.labels.credit }}</p>{% endif %}
+    </div>
+
+    <div class="text">
+        <p>Between 1970 and 2014, annual U.S. traffic on Lake Michigan fell from 131 million tons to 52 million tons — a drop of 60 percent. The fate of the lake’s shipping industry in the 21st century depends largely on other industries (namely, construction and domestic steel) and the overall health of the economy.</p>
+    </div>    
+
+    <script type="text/javascript">
+        var GRAPHIC_DATA = {{ COPY.data.json() }};
+    </script>
+
+{% endblock content %}

@@ -1,0 +1,30 @@
+{% extends 'base_template.html' %}
+
+{% block content %}
+
+    {% if COPY.labels.headline %}<h1>{{ COPY.labels.headline }}</h1>{% endif %}
+    {% if COPY.labels.subhed %}<h2>{{ render(COPY.labels.subhed) }}</h2>{% endif %}
+
+    <div id="graphic"><img src="fallback.png" alt="[Chart]" class="fallback" /></div>
+
+    {% if COPY.labels.footnote %}
+    <div class="footnotes">
+        <h4>Notes</h4>
+        <p>{{ COPY.labels.footnote }}</p>
+    </div>
+    {% endif %}
+
+    <div class="footer">
+        {% if COPY.labels.source %}<p>Source: {{ COPY.labels.source }}</p>{% endif %}
+        {% if COPY.labels.credit %}<p>Credit: {{ COPY.labels.credit }}</p>{% endif %}
+    </div>
+
+    <div class="text">
+        <p>Shortly after its creation in 1901, the United States Steel Corporation began building massive, integrated steel mills around the Great Lakes. Iron ore from Minnesota and coal from Pennsylvania flowed freely to mills in Cleveland, Ohio; Gary, Indiana; and Chicago — until the Great Depression ground traffic to a halt. In the early 1930s, many shipping vessels sat empty in ports.</p>
+    </div>  
+
+    <script type="text/javascript">
+        var GRAPHIC_DATA = {{ COPY.data.json() }};
+    </script>
+
+{% endblock content %}

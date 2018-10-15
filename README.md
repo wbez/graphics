@@ -1,9 +1,9 @@
-#WBEZ Graphics
+# WBEZ Graphics
 
-A list of graphics on wbez.org built with [NPR App's DailyGraphics rig](https://github.com/nprapps/dailygraphics) by date
+A list of graphics on wbez.org built with [NPR App's DailyGraphics rig](https://github.com/nprapps/dailygraphics).
 
 
-###2018
+### 2018
 
 ['Once Known For English Immersion, Charter Network Remakes Itself'](https://www.wbez.org/shows/wbez-news/once-known-for-english-immersion-charter-network-remakes-itself/8eff9ca3-f126-4d84-b1c3-aee72e7e4dd9)
 slugs: cps-demographics-20180627
@@ -69,7 +69,7 @@ slugs: drug-arrests-one, drug-arrests-two
 slugs: chicago-ave-lsd, chicago-ave-lsd 1.5-4, 
 
 
-###2017
+### 2017
 [Surviving War, But Not The Veterans' Home](https://interactive.wbez.org/legionnaires/)
 slug:quincy-timeline-20171212
 
@@ -117,7 +117,7 @@ slug:trump-kids-map
 slug:test-ai
 
 
-###2016
+### 2016
 [Towing The Line: Chicago’s Winter Parking Ban Not Necessary For Snow Removal](http://interactive.wbez.org/towing-the-line/)
 slugs:snow-tows, snow-tows-thanksgiving
 
@@ -128,90 +128,18 @@ slugs: contact-cards- (1-6)
 [Building Up and Tearing Down: Even as Demand Grows, some Chicago Neighborhoods Don’t](https://www.wbez.org/shows/wbez-news/building-up-and-tearing-down-even-as-demand-grows-some-chicago-neighborhoods-dont/5b809742-4c8b-4615-8907-e3cac111d8eb)
 slug:building-permits-pop-stacked, building-permits,scatter
 
-###2015
+### 2015
 [Chicago has a high school with 13 freshmen](https://www.wbez.org/shows/wbez-news/chicago-has-a-high-school-with-13-freshmen/dd7ebcb5-c22f-4b21-be36-583d0ad8bb6f)
 slug: 13freshmen
 
 [Where are Chicago's Poor White Neighborhoods?](https://www.wbez.org/shows/curious-city/where-are-chicagos-poor-white-neighborhoods/37e96521-d730-43b8-b645-633aab318314)
 slug:white-poverty
 
-###2014
+### 2014
 [Chicago Public Schools ACT Scores](http://interactive.wbez.org/gradingrahm/#education)
 slug: actscores
 
 
-###To be documented:
-air-travel
-assault-weapons
-building-scatter-2 
-census-2016-map
-census-pop-2016
-census-pop-2016-line-counties
-child-shootings
-clearance-absolute
-clearance-absolute-2018
-coffeemap
-comptroller
-council-votes
-cps-dempographics
-cps-demographics-lin
-csp-grad-rates-by-demo
-cps-level-scatter
-cps-level-scatter-hs
-craigslist
-cubs
-dunkin-stratton
-enrollment
-firearms-stops
-grading-rahm-homicide-rate
-gradrates
-home-equity-map
-homicide_ages_stack
-homicide-ca-bar
-homicide-totals-2
-homicides-race
-illinois-budget-income-not-accounted-for
-illinois-budget-income-obligations
-illinois-budget-line
-illinois-budget-line-20161102
-illinois-house-makeup
-illinois-senate-2016
-illinois-senate-makeup
-immigration-statements
-investigaors-line
-jobs-region
-jobs-region-bar
-lead-parks
-lead-parks-20160829
-lead-parks-20161018
-lead-ests
-leg-primary-costs
-measles_exemptions
-murders-2016
-police-deaths
-police-staffing-2017
-police-staffing-bar
-pres-precincts-2016
-pres-precincts-dem-pct-2016
-pres-wards-turnout-2016
-raunerbudget
-runoff
-school-arrests-change
-school-arrests-map
-school-arrests-offense
-shootings-2016
-silverstein
-snow-tows
-snow-thanksgiving
-state-test-scores-1
-state-test-scores-chicago
-state-test-scores-compare-3
-state-test-scores-growth
-super-bowl-birth
-super-bowl-line
-taximedallions
-unemployment-rate-race
-world-series-line
 
 
 
